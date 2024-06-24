@@ -1,9 +1,32 @@
 ---
-import { SITE } from 'astrowind:config';
+import Image from '~/components/common/Image.astro';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white dark:hidden w-8/12"
 >
-  🚀 {SITE?.name}
+  <Image
+    class="w-8/12"
+    widths={[400, 768, 1024, 1563]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px"
+    loading="eager"
+    width={1563}
+    height={303}
+    src="~/assets/images/kodeloom-logo_black.png"
+    alt="Kodeloom Logo"
+  />
+</span>
+<span
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white hidden dark:block w-8/12"
+>
+  <Image
+    class="w-8/12"
+    widths={[400, 768, 1024, 1563]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px"
+    loading="eager"
+    width={1563}
+    height={303}
+    src="~/assets/images/kodeloom-logo_white.png"
+    alt="Kodeloom Logo"
+  />
 </span>

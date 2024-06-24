@@ -1,30 +1,30 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Kodeloom
+  site: 'https://kodeloom.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: dd
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Kodeloom
+    template: '%s — Kodeloom'
+  description: "Kodeloom Software Solutions - Solutions for your business"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Kodeloom
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.jpg'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@kodeloom'
+    site: '@kodeloom'
     cardType: summary_large_image
 
 i18n:
@@ -69,4 +69,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
