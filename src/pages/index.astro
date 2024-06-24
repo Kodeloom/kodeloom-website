@@ -10,9 +10,8 @@ import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import Contact from '~/components/widgets/Contact.astro';
 import Note from '~/components/widgets/Note.astro';
-
-import { YouTube } from 'astro-embed';
 
 const metadata = {
   title: 'Kodeloom — Software solutions for your business',
@@ -71,6 +70,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
+    id="services"
     title="Our Services"
     subtitle="From custom website development to robust e-commerce solutions, SEO services, and seamless website hosting and maintenance, explore our comprehensive range of services tailored to meet your business needs."
     items={[
@@ -248,74 +248,58 @@ const metadata = {
     </Fragment>
   </FAQs>
 
-  <!-- Features3 Widget ************** -->
+  <Contact
+    id="contact-us"
+    title="Get in touch"
+    subtitle="Ready to get started? Send us a message now, and let's make it happen!"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+        placeholder: 'Name',
+        autocomplete: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'john@your-business.com',
+        autocomplete: 'email',
+      },
+      {
+        type: 'text',
+        name: 'service',
+        label: "Service you're interesd in",
+        placeholder: 'E-Commerce development',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label: 'By submitting this contact form, you agree to be contacted by Kodeloom Software Solutions LLC',
+    }}
+    description="We will get back to you within 24 hours."
+  />
 
-  <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
-    columns={4}
+  <Features2
     items={[
       {
         title: 'Phone',
-        icon: 'tabler:phone',
-        callToAction: {
-          target: '_blank',
-          text: 'Call us',
-          href: '/',
-          variant: 'link',
-        },
+        description: '+1 (949) 529-1757',
+        icon: 'tabler:headset',
       },
       {
         title: 'Email',
+        description: 'info@kodeloom.com',
         icon: 'tabler:mail',
-        callToAction: {
-          target: '_blank',
-          text: 'Write to us',
-          href: '/',
-          variant: 'link',
-        },
       },
       {
-        title: 'Chat with sales',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with support',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: '/',
-          variant: 'link',
-        },
+        title: 'Location',
+        description: 'Riverside, CA, US',
+        icon: 'tabler:map-pin',
       },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        target: '_blank',
-        text: 'Get templates',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">Be a part of our vision</Fragment>
-
-    <Fragment slot="subtitle">
-      Discover a dynamic work environment, unparalleled growth opportunities, and the chance to make a meaningful
-      impact.
-    </Fragment>
-  </CallToAction>
 </Layout>
