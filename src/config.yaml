@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Kodeloom
+    default: Kodeloom Software Solutions
     template: '%s — Kodeloom'
-  description: "Kodeloom Software Solutions - Solutions for your business"
+  description: "Boost your business online presence with Kodeloom Software Solutions. We offer custom website development, e-commerce solutions, SEO services, website hosting and more. Improve your digital presence with our team and innovative solutions. Contact us today to bring your online success!"
   robots:
     index: true
     follow: true
